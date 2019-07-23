@@ -33,9 +33,9 @@ install:
 script: 
 
   # Build and run the tests
-  #- qmake setupTest.pro
+  #- qmake program_test.pro
   #- make --silent debug
-  #- ./setupTest
+  #- ./program_test
   
   # helgrind
   - valgrind --tool=helgrind --log-file=helgrind.log -v ./setupTest
@@ -46,9 +46,9 @@ script:
   - cat memcheck.log
   
   # Build and run and profile normal program
-  - qmake setup.pro
+  - qmake program.pro
   - make --silent release
-  - time ./setup
+  - time ./progran
   - gprof setup > gprof.log
   - head gprof.log -n 1000
   

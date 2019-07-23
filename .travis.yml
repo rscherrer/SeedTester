@@ -34,9 +34,9 @@ install:
 script: 
 
  # Build and run the tests
- - qmake ci_setup/program_test.pro
- - make --silent debug
- - ./program_test
+ #- qmake ci_setup/program_test.pro
+ #- make --silent debug
+ #- ./program_test
   
  # helgrind
  - valgrind --tool=helgrind --log-file=helgrind.log -v ./program

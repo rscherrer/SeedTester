@@ -1,5 +1,4 @@
 # Files
-include(setup.pri)
 SOURCES += main.cpp
 
 # C++14

@@ -34,17 +34,17 @@ install:
 script: 
 
  # Build and run the tests
- #- qmake ci_setup/program_test.pro
- #- make --silent debug
- #- ./program_test
+ - qmake ci_setup/program_test.pro
+ - make --silent debug
+ - ./program_test
   
  # helgrind
- #- valgrind --tool=helgrind --log-file=helgrind.log -v ./program_test
- #- cat helgrind.log
+ - valgrind --tool=helgrind --log-file=helgrind.log -v ./program_test
+ - cat helgrind.log
   
  # memcheck
- #- valgrind --leak-check=full -v --show-reachable=yes --log-file=memcheck.log ./program_test
- #- cat memcheck.log
+ - valgrind --leak-check=full -v --show-reachable=yes --log-file=memcheck.log ./program_test
+ - cat memcheck.log
   
  # Build and run and profile normal program
  - qmake ci_setup/program.pro

@@ -1,4 +1,5 @@
 # Files
+include(program.pri)
 SOURCES += test.cpp
 
 # C++14

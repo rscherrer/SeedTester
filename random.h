@@ -8,7 +8,7 @@
 namespace rnd
 {
 
-    std::mt19937_64 rng;
+    extern std::mt19937_64 rng;
 
 }
 
